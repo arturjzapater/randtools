@@ -1,0 +1,20 @@
+{
+  "name": "randtools",
+  "version": "1.0.0",
+  "description": "Generate random numbers with different distributions",
+  "main": "index.js",
+  "repository": {},
+  "files": [ "index.js", "custom.js", "normal.js", "uniform.js" ],
+  "keywords": [
+    "distribution",
+    "gaussian",
+    "generate",
+    "custom",
+    "normal",
+    "random",
+    "rng",
+    "uniform"
+  ],
+  "author": "SavagePixie",
+  "license": "MIT"
+}
