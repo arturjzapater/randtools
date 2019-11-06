@@ -55,7 +55,7 @@ Returns a random element from a given array.
 Generates a random number within a given range.
 - `from`: the lowest possible returned number.
 - `to`: the highest possible returned number.
-- `decimals`: the amount of decimals that the generated number will have. It defaults to zero.
+- `decimals`: the amount of decimals that the generated number will have. It defauls to zero. If either `from` or `to` is a number with more decimal digits than `decimals`, the function will use that amount instead.
 - `devs`: the amount of standard deviations within the allowed range of results. A small number will create a more uniform distribution, while a big number will reduce the chances of numbers on the fringes of the range to come up. It defaults to three. It won't accept any value smaller than 1.
 
 ### Uniform Distribution Functions
@@ -72,7 +72,7 @@ Returns a random element from a given array.
 Generates a random number within a given range.
 - `from`: the lowest possible returned number.
 - `to`: the highest possible returned number.
-- `decimals`: the amount of decimals that the generated number will have. It defaults to zero.
+- `decimals`: the amount of decimals that the generated number will have. It defaults to zero. If either `from` or `to` is a number with more decimal digits than `decimals`, the function will use that amount instead.
 
 ### Custom Distribution Functions
 
