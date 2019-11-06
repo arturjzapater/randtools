@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/SavagePixie/randtools"
   },
-  "files": [ "index.js", "custom.js", "normal.js", "uniform.js" ],
+  "files": [ "src", "index.js", "custom.js", "normal.js", "uniform.js" ],
   "keywords": [
     "distribution",
     "gaussian",
