@@ -1,11 +1,11 @@
 {
   "name": "randtools",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate random numbers with different distributions",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/SavagePixie/randtools"
+    "url": "git+https://github.com/SavagePixie/randtools"
   },
   "files": [ "index.js", "custom.js", "normal.js", "uniform.js" ],
   "keywords": [
