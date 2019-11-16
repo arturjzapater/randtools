@@ -3,7 +3,6 @@
 **randtools** is a small JavaScript library to generate random numbers and select random elements from arrays. It supports [normal distributions](https://en.wikipedia.org/wiki/Normal_distribution) as well as [uniform](https://en.wikipedia.org/wiki/Uniform_distribution_(continuous)) and custom distributions.
 
 - [Installation](#installation)
-- [How to Use It](#how-to-use-it)
 - [Functions](#functions)
 
 ## Installation
