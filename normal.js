@@ -1,4 +1,4 @@
-import getDecimals from "./src/util"
+import getDecimals from "./src/decimalHandler"
 
 const base = (m=0, d=1) => (Math.sqrt(-2 * Math.log(Math.random())) * Math.cos(2 * Math.PI * Math.random())) * d + m
 
