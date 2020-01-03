@@ -1,4 +1,4 @@
-import getDecimals from "./src/decimalHandler"
+const getDecimals = require('./src/decimalHandler')
 
 const base = (from, to) => Math.floor(Math.random() * (1 + to - from)) + from
 

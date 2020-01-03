@@ -1,4 +1,4 @@
-import { unifRange } from "./uniform"
+const { unifRange } = require('./uniform')
 
 const cstmChoose = (data, chance) => {
     const elem = unifRange(1, 100)
