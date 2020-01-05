@@ -3,11 +3,17 @@
   "version": "1.1.0",
   "description": "Generate random numbers with different distributions",
   "main": "index.js",
+  "scripts": {
+    "test": "NODE_PATH=src:test tap --reporter=specy 'test/**/*-test.js'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SavagePixie/randtools"
   },
-  "files": [ "src", "index.js" ],
+  "files": [
+    "src",
+    "index.js"
+  ],
   "keywords": [
     "distribution",
     "gaussian",
@@ -20,5 +26,8 @@
   ],
   "author": "SavagePixie",
   "license": "MIT",
-  "homepage": "https://github.com/SavagePixie/randtools#readme"
+  "homepage": "https://github.com/SavagePixie/randtools#readme",
+  "devDependencies": {
+    "tap": "^14.10.5"
+  }
 }
