@@ -1,8 +1,10 @@
-const { unifRange } = require('./uniform')
+const { range } = require('./uniform')
 
-const cstmChoose = (data, chance) => {
-    const elem = unifRange(1, 100)
+const choose = (data, chance) => {
+    const elem = range(1, 100)
     return data[chance.findIndex(x => elem <= x)]
 }
 
-module.exports = { cstmChoose }
+module.exports = {
+    choose,
+}
