@@ -4,7 +4,7 @@
   "description": "Generate random numbers with different distributions",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_PATH=src:test tap --reporter=specy 'test/**/*-test.js'"
+    "test": "NODE_PATH=src:test tap --reporter=specy 'test/**/*.test.js'"
   },
   "repository": {
     "type": "git",

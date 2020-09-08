@@ -1,5 +1,4 @@
 const tap = require('tap')
-
 const rnd = require('../index')
 
 const getDecimals = num => num.toString().split('.')[1] || { length: 0 }
@@ -130,10 +129,10 @@ tap.test('cstmChoose', t => {
             c: results.filter(x => x === 'c').length,
             d: results.filter(x => x === 'd').length,
         }
-        t.ok(sample.a > 9800 && sample.a < 10200, 'About 10% is a')
-        t.ok(sample.b > 19800 && sample.b < 20200, 'About 20% is b')
-        t.ok(sample.c > 29800 && sample.c < 30200, 'About 30% is c')
-        t.ok(sample.d > 39800 && sample.d < 40200, 'About 40% is d')
+        t.ok(sample.a > 9700 && sample.a < 10300, 'About 10% is a')
+        t.ok(sample.b > 19700 && sample.b < 20300, 'About 20% is b')
+        t.ok(sample.c > 29700 && sample.c < 30300, 'About 30% is c')
+        t.ok(sample.d > 39700 && sample.d < 40300, 'About 40% is d')
         t.end()
     })
 
