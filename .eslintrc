@@ -1,0 +1,7 @@
+{
+    "extends": "pixie",
+    "rules": {
+        "indent": [ "error", 4 ],
+        "no-multiple-empty-lines": "error"
+    }
+}

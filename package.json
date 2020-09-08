@@ -28,6 +28,8 @@
   "license": "MIT",
   "homepage": "https://github.com/arturjzapater/randtools#readme",
   "devDependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-pixie": "^1.0.2",
     "tap": "^14.10.8"
   }
 }
