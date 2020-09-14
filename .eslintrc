@@ -1,7 +1,10 @@
 {
     "extends": "pixie",
     "rules": {
+        "arrow-spacing": "error",
         "indent": [ "error", 4 ],
-        "no-multiple-empty-lines": "error"
+        "keyword-spacing": "error",
+        "no-multiple-empty-lines": "error",
+        "space-before-blocks": "error"
     }
 }
