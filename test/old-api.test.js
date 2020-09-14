@@ -51,6 +51,17 @@ tap.test('normRange', t => {
         t.end()
     })
 
+    t.test('should ignore invalid input', t => {
+        const result1 = rnd.normal.range(1, 4, 0, -5)
+        t.ok(result1 >= 1)
+        t.ok(result1 <= 4)
+
+        const result2 = rnd.normal.range(1, 4, 0, 'potato')
+        t.ok(result2 >= 1)
+        t.ok(result2 <= 4)
+        t.end()
+    })
+
     t.end()
 })
 
@@ -116,23 +127,6 @@ tap.test('cstmChoose', t => {
         const chance = [ 10, 30, 60, 100 ]
         const choice = rnd.cstmChoose(arr, chance)
         t.ok(arr.includes(choice))
-        t.end()
-    })
-
-    t.test('should return elements according to specified chance', t => {
-        const arr = [ 'a', 'b', 'c', 'd' ]
-        const chance = [ 10, 30, 60, 100 ]
-        const results = getSamples(() => rnd.cstmChoose(arr, chance), 100000)
-        const sample = {
-            a: results.filter(x => x === 'a').length,
-            b: results.filter(x => x === 'b').length,
-            c: results.filter(x => x === 'c').length,
-            d: results.filter(x => x === 'd').length,
-        }
-        t.ok(sample.a > 9700 && sample.a < 10300, 'About 10% is a')
-        t.ok(sample.b > 19700 && sample.b < 20300, 'About 20% is b')
-        t.ok(sample.c > 29700 && sample.c < 30300, 'About 30% is c')
-        t.ok(sample.d > 39700 && sample.d < 40300, 'About 40% is d')
         t.end()
     })
 
