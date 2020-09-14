@@ -1,5 +1,4 @@
 const tap = require('tap')
-
 const rnd = require('../index')
 
 const getDecimals = num => num.toString().split('.')[1] || { length: 0 }
@@ -49,6 +48,17 @@ tap.test('normRange', t => {
         t.ok(decs === 2, 'There are two decimals')
         const decs2 = Math.max(...getSamples(() => getDecimals(rnd.normRange(2.22, 3, 1)).length, 100))
         t.ok(decs2 === 2, 'Retuns decimals according to parameter with more decimals')
+        t.end()
+    })
+
+    t.test('should ignore invalid input', t => {
+        const result1 = rnd.normal.range(1, 4, 0, -5)
+        t.ok(result1 >= 1)
+        t.ok(result1 <= 4)
+
+        const result2 = rnd.normal.range(1, 4, 0, 'potato')
+        t.ok(result2 >= 1)
+        t.ok(result2 <= 4)
         t.end()
     })
 
@@ -117,23 +127,6 @@ tap.test('cstmChoose', t => {
         const chance = [ 10, 30, 60, 100 ]
         const choice = rnd.cstmChoose(arr, chance)
         t.ok(arr.includes(choice))
-        t.end()
-    })
-
-    t.test('should return elements according to specified chance', t => {
-        const arr = [ 'a', 'b', 'c', 'd' ]
-        const chance = [ 10, 30, 60, 100 ]
-        const results = getSamples(() => rnd.cstmChoose(arr, chance), 100000)
-        const sample = {
-            a: results.filter(x => x === 'a').length,
-            b: results.filter(x => x === 'b').length,
-            c: results.filter(x => x === 'c').length,
-            d: results.filter(x => x === 'd').length,
-        }
-        t.ok(sample.a > 9800 && sample.a < 10200, 'About 10% is a')
-        t.ok(sample.b > 19800 && sample.b < 20200, 'About 20% is b')
-        t.ok(sample.c > 29800 && sample.c < 30200, 'About 30% is c')
-        t.ok(sample.d > 39800 && sample.d < 40200, 'About 40% is d')
         t.end()
     })
 
