@@ -29,6 +29,15 @@ tap.test('custom.sequence', t => {
         t.end()
     })
 
+    t.test('should handle decreasing sequence', t => {
+        const chances = [ 15, 25, 40, 75, 85, 100 ]
+        const seq = [ 10, 9, 8, 7, 6, 5 ]
+        t.ok(seq.includes(custom.sequence(10, chances, { step: -1 })))
+        t.ok(seq.includes(custom.sequence(10, chances, { step: -1 })))
+        t.ok(seq.includes(custom.sequence(10, chances, { step: -1 })))
+        t.end()
+    })
+
     t.test('should throw on invalid start', t => {
         t.throws(() => custom.sequence('potato', [ 50, 100 ]))
         t.throws(() => custom.sequence(12, [ 50, 100 ], { step: {} }))

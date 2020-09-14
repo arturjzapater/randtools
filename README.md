@@ -26,7 +26,7 @@ const decimalNum = rnd.uniform.range(2, 3, 2)
 
 ## New API
 
-**randtools** offers a total of six functions for three different kinds of distributions.
+**randtools** offers a total of seven functions for three different kinds of distributions.
 
 - [Normal Distribution Functions](#normal-distribution-functions)
     - [choose](#normal-choose)
@@ -37,6 +37,7 @@ const decimalNum = rnd.uniform.range(2, 3, 2)
     - [range](#uniform-range)
 - [Custom Distribution Functions](#custom-distribution-functions)
     - [choose](#custom-choose)
+    - [sequence](#custom-sequence)
 
 ### Normal Distribution Functions
 
@@ -120,14 +121,27 @@ Returns a random element from a given array.
 This function takes two arrays of the same length. The first one are the values from which to return something. The second one describes how likely each result is to come up. In the following code, `cstmChoose` will return an element from `array`. `a` will have a 20% to be returned, `b`'s chance will be 30% (50 - 20) and `c`'s 50% (100 - 50).
 
 ```javascript
-const rnd = require('randtools')
-
 const array = [ "a", "b", "c" ]
 const likelihood = [ 20, 50, 100 ]
 const randElem = rnd.custom.choose(array, likelihood)
 ```
 
-**Note** that if `array` is longer than `chance`, the elements with higher indexes will never be returned. Conversely, if `chance` is longer or if the last element is below 100, the function might return `undefined`
+**Note** that if `array` is longer than `chance`, the elements with higher indexes will never be returned. Conversely, if `chance` is longer or if the last element is below 100, the function might return `undefined`.
+
+#### sequence(start, chance[, options ]) {#custom-sequence}
+
+Returns a random number from a sequence defined by a starting point and, optionally, a step.
+- `start`: the starting point of the sequence.
+- `chance`: an array in which the cumulative chance for each number of the sequence is given. The last element should be given a value of `100`.
+- `options`: an optional object with the key `step`, which indicates how much the numbers of the sequence should increase in each step. It defaults to `1`.
+
+The function will return a random element in a sequence of the same length as the `chance` array.
+
+```javascript
+const chances = [ 15, 25, 40, 50, 85, 100 ]
+rnd.custom.sequence(10, chances) //Returns a random number in the sequence [ 10, 11, 12, 13, 14, 15 ]
+rnd.custom.sequence(0, chances, { step: 0.25 }) //Returns a random number in the sequence [ 0, 0.25, 0.5, 0.75, 1, 1.25 ]
+```
 
 ## Old API
 
