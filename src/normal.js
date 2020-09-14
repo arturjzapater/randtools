@@ -23,7 +23,7 @@ const range = (from, to, decs = 0, devs = 3) => {
 }
 
 module.exports = {
-    mean,
     choose,
+    mean,
     range,
 }
