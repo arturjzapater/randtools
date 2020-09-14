@@ -1,6 +1,6 @@
 const getDecimals = require('./lib/decimalHandler')
 
-const base = (m = 0, d = 1) => 
+const base = (m = 0, d = 1) =>
     (Math.sqrt(-2 * Math.log(Math.random())) * Math.cos(2 * Math.PI * Math.random())) * d + m
 
 const calculateStdDev = (from, to, devs) => (to - from) / (2 * devs)
