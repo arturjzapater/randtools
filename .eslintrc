@@ -5,6 +5,7 @@
         "indent": [ "error", 4 ],
         "keyword-spacing": "error",
         "no-multiple-empty-lines": "error",
+        "no-trailing-spaces": "error",
         "space-before-blocks": "error"
     }
 }
